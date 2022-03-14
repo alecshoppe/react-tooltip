@@ -19,7 +19,7 @@ const bodyListener = function(callback, options, e) {
   const { respectEffect = false, customEvent = false } = options;
   const { id } = this.props;
 
-  const tip = e.target.getAttribute('data-tip') || null;
+  const tip = e.target.getAttribute('data-ttip') || null;
   const forId = e.target.getAttribute('data-for') || null;
 
   const target = e.target;

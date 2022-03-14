@@ -245,10 +245,10 @@ class ReactTooltip extends React.Component {
     let targetArray = [];
     let selector;
     if (!id) {
-      selector = '[data-tip]:not([data-for])';
+      selector = '[data-ttip]:not([data-for])';
     } else {
       const escaped = id.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
-      selector = `[data-tip][data-for="${escaped}"]`;
+      selector = `[data-ttip][data-for="${escaped}"]`;
     }
 
     // Scan document for shadow DOM elements
