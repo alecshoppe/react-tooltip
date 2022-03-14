@@ -407,7 +407,7 @@ var bodyListener = function bodyListener(callback, options, e) {
       _options$customEvent = options.customEvent,
       customEvent = _options$customEvent === void 0 ? false : _options$customEvent;
   var id = this.props.id;
-  var tip = e.target.getAttribute('data-tip') || null;
+  var tip = e.target.getAttribute('data-ttip') || null;
   var forId = e.target.getAttribute('data-for') || null;
   var target = e.target;
 
@@ -2077,10 +2077,10 @@ function (_React$Component) {
       var selector;
 
       if (!id) {
-        selector = '[data-tip]:not([data-for])';
+        selector = '[data-ttip]:not([data-for])';
       } else {
         var escaped = id.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
-        selector = "[data-tip][data-for=\"".concat(escaped, "\"]");
+        selector = "[data-ttip][data-for=\"".concat(escaped, "\"]");
       } // Scan document for shadow DOM elements
 
 
@@ -2243,7 +2243,7 @@ function (_React$Component) {
       var _this$props5 = this.props,
           multiline = _this$props5.multiline,
           getContent = _this$props5.getContent;
-      var originTooltip = e.currentTarget.getAttribute('data-tip');
+      var originTooltip = e.currentTarget.getAttribute('data-ttip');
       var isMultiline = e.currentTarget.getAttribute('data-multiline') || multiline || false; // If it is focus event or called by ReactTooltip.show, switch to `solid` effect
 
       var switchToSolid = e instanceof window.FocusEvent || isGlobalCall; // if it needs to skip adding hide listener to scroll
